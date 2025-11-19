@@ -4,7 +4,7 @@ volumes:
   pg_data_production:
   static_volume:
 
-# Всё отличие — заменяем build1 на image и указываем, какой образ использовать
+# Всё отличие — заменяем build на image и указываем, какой образ использовать/
 services:
   db:
     image: postgres:13.10
@@ -23,7 +23,7 @@ services:
     volumes:
       - static_volume:/frontend_static
   gateway:
-    image: meltim/taski_gateway  # Качаем с Docker Hub
+    image: meltim/taski_gateway  # Качаем с Docker Hub.
     env_file: .env
     volumes:
       - static_volume:/staticfiles/
